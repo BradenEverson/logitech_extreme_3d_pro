@@ -1,3 +1,6 @@
+//! Channel bindings for all buttons and axis the joystick has
+
+/// All different rotational axis
 pub enum Axis {
     /// Axis 1
     StickUpDown,
@@ -13,6 +16,7 @@ pub enum Axis {
     Throttle,
 }
 
+/// All different buttons 
 pub enum Button {
     /// 288
     Trigger,
