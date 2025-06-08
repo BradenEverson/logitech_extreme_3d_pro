@@ -1,1 +1,1 @@
-# Control Bindings for the Logitech Extreme 3D Pro!
+# Control Bindings for the Logitech Extreme 3D Pro
