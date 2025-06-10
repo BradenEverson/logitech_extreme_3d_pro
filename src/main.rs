@@ -4,7 +4,9 @@ use evdev::Device;
 use joyboy::joystick::AxisEvent;
 use std::error::Error;
 
+/// The Logitech Extreme 3D Pro Vendor ID
 pub const VENDOR_ID: u16 = 0x046d;
+/// The Logitech Extreme 3D Pro Product ID
 pub const PRODUCT_ID: u16 = 0xc215;
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -24,6 +26,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 }
 
+/// Find the joystick by vendor id and product id
 fn find_joystick(vendor_id: u16, product_id: u16) -> Option<Device> {
     for (_, device) in evdev::enumerate() {
         let id = device.input_id();
