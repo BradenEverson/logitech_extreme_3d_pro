@@ -3,6 +3,7 @@
 /// All different rotational axis
 use evdev::{EventType, InputEvent};
 
+/// The different rotational axis
 #[derive(Debug, Clone, Copy)]
 pub enum Axis {
     /// Axis 1
@@ -19,7 +20,6 @@ pub enum Axis {
     Throttle,
 }
 
-/// All different buttons 
 impl TryFrom<u16> for Axis {
     type Error = ();
     fn try_from(value: u16) -> Result<Self, Self::Error> {
@@ -35,8 +35,8 @@ impl TryFrom<u16> for Axis {
     }
 }
 
+/// All different buttons
 #[derive(Debug, Clone, Copy)]
->>>>>>> 2c4686c (Parse events better)
 pub enum Button {
     /// 288
     Trigger,

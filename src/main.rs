@@ -1,18 +1,19 @@
-use evdev::{Device, EventType, InputEvent};
+//! Sample main program that parses all incoming events
+
+use evdev::Device;
 use joyboy::joystick::AxisEvent;
 use std::error::Error;
 
-fn main() -> Result<(), Box<dyn Error>> {
-    const VENDOR_ID: u16 = 0x046d;
-    const PRODUCT_ID: u16 = 0xc215;
+pub const VENDOR_ID: u16 = 0x046d;
+pub const PRODUCT_ID: u16 = 0xc215;
 
+fn main() -> Result<(), Box<dyn Error>> {
     let mut device = find_joystick(VENDOR_ID, PRODUCT_ID).ok_or("Device not found")?;
 
     println!(
         "Opened device: {}",
         device.name().unwrap_or("Unnamed device")
     );
-    println!("Reading events (Ctrl+C to exit)...\n");
 
     loop {
         for event in device.fetch_events()? {
