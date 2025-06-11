@@ -1,7 +1,7 @@
 //! Sample main program that parses all incoming events
 
 use evdev::Device;
-use joyboy::joystick::AxisEvent;
+use logitech_extreme_3d_pro::joystick::AxisEvent;
 use std::error::Error;
 
 /// The Logitech Extreme 3D Pro Vendor ID
