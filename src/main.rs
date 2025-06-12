@@ -10,8 +10,8 @@ use std::time::Duration;
 const VENDOR_ID: u16 = 0x046d;
 const PRODUCT_ID: u16 = 0xc215;
 
-const STEP_PIN: u8 = 4;
-const DIR_PIN: u8 = 5;
+const STEP_PIN: u8 = 17;
+const DIR_PIN: u8 = 27;
 
 const STEP_DELAY_US: u64 = 1000;
 const DEADZONE_LOW: i32 = 450;
