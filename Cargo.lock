@@ -61,6 +61,7 @@ name = "logitech_extreme_3d_pro"
 version = "0.1.0"
 dependencies = [
  "evdev",
+ "rppal",
 ]
 
 [[package]]
@@ -80,6 +81,15 @@ name = "radium"
 version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dc33ff2d4973d518d823d61aa239014831e521c75da58e3df4840d3f47749d09"
+
+[[package]]
+name = "rppal"
+version = "0.22.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c1ce3b019009cff02cb6b0e96e7cc2e5c5b90187dc1a490f8ef1521d0596b026"
+dependencies = [
+ "libc",
+]
 
 [[package]]
 name = "tap"

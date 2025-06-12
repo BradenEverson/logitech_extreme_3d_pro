@@ -5,8 +5,11 @@ edition = "2024"
 
 [dependencies]
 evdev = "0.13.1"
+rppal = "0.22.1"
 
-[lib]
+[dev-dependencies]
+
+# [lib]
 
 [lints.rust]
 missing_docs = "warn"
